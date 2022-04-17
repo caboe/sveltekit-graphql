@@ -1,18 +1,9 @@
-import { gql, ApolloServer } from 'apollo-server-svelte-kit';
+import { ApolloServer } from 'apollo-server-svelte-kit';
+import typeDefs from '../lib/graphql/schema/server';
 
 const handler = async (req) => {
 	const apolloServer = new ApolloServer({
-		typeDefs: gql`
-			type Book {
-				title: String
-				author: String
-			}
-			type Query {
-				ping: String!
-				name: String
-				books: [Book]
-			}
-		`,
+		typeDefs,
 		resolvers: {
 			Query: {
 				ping: () => 'pong',
