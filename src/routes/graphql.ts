@@ -1,5 +1,5 @@
-import { ApolloServer } from 'apollo-server-svelte-kit';
-import typeDefs from '../lib/graphql/schema/server';
+import { ApolloServer } from 'apollo-server-svelte-kit'
+import typeDefs from '../lib/graphql/schema/server'
 
 const handler = async (req) => {
 	const apolloServer = new ApolloServer({
