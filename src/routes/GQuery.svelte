@@ -1,5 +1,6 @@
 <script context="module">
 	import { getBooks, Books } from '$lib/Books.gq';
+import { get } from 'svelte/store';
 
 	export async function load({ fetch }) {
 		await getBooks({ fetch });
